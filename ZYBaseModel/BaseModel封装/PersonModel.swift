@@ -12,6 +12,6 @@ class PersonModel: BaseModel {
 
     var name:String?;
     var age:NSNumber?;
-    var addr="";
+    var addr:String?;
     var sex:NSNumber?;
 }

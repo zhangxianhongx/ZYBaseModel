@@ -9,8 +9,8 @@
 import UIKit
 
 class ViewController: UIViewController {
-    var str : String?;
-    var age : NSNumber?;
+    var str = String();
+    var age = NSNumber();
     @IBOutlet weak var viewLabel: UILabel!
     
     override func viewDidLoad() {
@@ -18,13 +18,13 @@ class ViewController: UIViewController {
         
        
         
-        let dataDiac = ["addr":str,"age":age,"sex":NSNull.init()] as [String : Any]
-        let pModel = PersonModel.init(dic:dataDiac as NSDictionary );
+        let dataDiac = ["addr":str,"age":age,"sex":NSNull.init(),"name":"sss"] as [String : Any]
+        let pModel = PersonModel.init(dic:dataDiac);
         
 //        print("ddd",pModel.name,"\n",pModel.age,"\n",pModel.addr,pModel.sex);
         viewLabel.text = pModel.addr;
-        viewLabel.text = String.init(format: "%@%@", pModel.sex!,pModel.age!);
-       
+//        viewLabel.text = String.init(format: "%@%@", pModel.sex!,pModel.age!);
+      
         
     }
 

@@ -42,9 +42,9 @@
 		8619D01A1DD07531003BDAD7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8619D03D1DD0753C003BDAD7 /* BaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
 		8619D0401DD07651003BDAD7 /* PersonModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonModel.swift; sourceTree = "<group>"; };
+		866B0CC21DE2EC1400132F2C /* BaseModel封装Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BaseModel封装Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		866B0CC31DE2EC1400132F2C /* BaseModel封装UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BaseModel封装UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		868CADF71DDB1BD40057CA25 /* BaseModel封装.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BaseModel封装.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		868CADF81DDB1BD40057CA25 /* BaseModel封装Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "BaseModel封装Tests.xctest"; path = "/Users/ybon/Desktop/BaseModel封装/build/Debug-iphoneos/BaseModel封装Tests.xctest"; sourceTree = "<absolute>"; };
-		868CADF91DDB1BD40057CA25 /* BaseModel封装UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "BaseModel封装UITests.xctest"; path = "/Users/ybon/Desktop/BaseModel封装/build/Debug-iphoneos/BaseModel封装UITests.xctest"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +77,8 @@
 			children = (
 				8619D00D1DD07531003BDAD7 /* BaseModel封装 */,
 				868CADF71DDB1BD40057CA25 /* BaseModel封装.app */,
+				866B0CC21DE2EC1400132F2C /* BaseModel封装Tests.xctest */,
+				866B0CC31DE2EC1400132F2C /* BaseModel封装UITests.xctest */,
 			);
 			sourceTree = "<group>";
 		};
@@ -146,7 +148,7 @@
 			);
 			name = "BaseModel封装Tests";
 			productName = "BaseModel封装Tests";
-			productReference = 868CADF81DDB1BD40057CA25 /* BaseModel封装Tests.xctest */;
+			productReference = 866B0CC21DE2EC1400132F2C /* BaseModel封装Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		8619D0291DD07531003BDAD7 /* BaseModel封装UITests */ = {
@@ -164,7 +166,7 @@
 			);
 			name = "BaseModel封装UITests";
 			productName = "BaseModel封装UITests";
-			productReference = 868CADF91DDB1BD40057CA25 /* BaseModel封装UITests.xctest */;
+			productReference = 866B0CC31DE2EC1400132F2C /* BaseModel封装UITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
