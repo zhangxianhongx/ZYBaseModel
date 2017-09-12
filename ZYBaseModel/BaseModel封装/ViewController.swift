@@ -22,7 +22,7 @@ class ViewController: UIViewController {
         let pModel = PersonModel.init(dic:dataDiac);
         
 //        print("ddd",pModel.name,"\n",pModel.age,"\n",pModel.addr,pModel.sex);
-        viewLabel.text = pModel.addr;
+        viewLabel.text = pModel.name;
 //        viewLabel.text = String.init(format: "%@%@", pModel.sex!,pModel.age!);
       
         

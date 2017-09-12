@@ -12,9 +12,9 @@ class BaseModel: NSObject {
     //用于判断的属性
     private var zyteststr:String?;
     
-    var _map : Dictionary<String,Any>?;
+    private var _map : Dictionary<String,Any>?;
     
-    var map : Dictionary<String,Any>{
+    public var map : Dictionary<String,Any>{
         
         set{
             
@@ -27,7 +27,7 @@ class BaseModel: NSObject {
         }
     }
     
-    init(dic:Dictionary<String,Any>) {
+   public init(dic:Dictionary<String,Any>) {
         super.init()
         
         setAtribute(dic: dic);
@@ -36,7 +36,7 @@ class BaseModel: NSObject {
        
     
     
-    func setAtribute(dic:Dictionary<String,Any>){
+    public func setAtribute(dic:Dictionary<String,Any>){
         
         for i in dic.keys{
             
@@ -47,16 +47,8 @@ class BaseModel: NSObject {
             let selectedName = NSString (format: "set%@%@:", firstP,keys.substring(from: keys.index(keys.startIndex, offsetBy: 1)));
             let method :Selector = NSSelectorFromString(selectedName as String);
     
-            if dic[keys] is NSNull{
-                self.performSelector(onMainThread: method, with: "", waitUntilDone: Thread.isMainThread);
-            }else if dic[keys] == nil {
-                self.performSelector(onMainThread: method, with: "", waitUntilDone: Thread.isMainThread);
-            }else
-            if let values = dic[keys] {
-                self.performSelector(onMainThread: method, with: values, waitUntilDone: Thread.isMainThread);
-            }else{
-                self.performSelector(onMainThread: method, with: "", waitUntilDone: Thread.isMainThread);
-
+            if self.responds(to: method){
+                setKeyForValue(key: keys, dic: dic,method: method);
             }
         }
         
@@ -72,19 +64,7 @@ class BaseModel: NSObject {
             let selectedName : NSString = key as NSString;
             let method :Selector = NSSelectorFromString(selectedName as String);
             if self.responds(to: method){
-                
-                if dic[key] is NSNull{
-                    self.performSelector(onMainThread: method, with: "", waitUntilDone: Thread.isMainThread);
-                }else
-                    if let values = dic[key] {
-                        self.performSelector(onMainThread: method, with: values, waitUntilDone: Thread.isMainThread);
-                    }else{
-                        self.performSelector(onMainThread: method, with: "", waitUntilDone: Thread.isMainThread);
-                        
-                }
-              
-                
-                
+                setKeyForValue(key: key, dic: dic,method: method);
             }
 
             
@@ -93,7 +73,17 @@ class BaseModel: NSObject {
         
     }
     
-    
+    //数据处理
+    private func setKeyForValue(key:String,dic:Dictionary<String, Any>,method:Selector){
+        
+        if dic[key] is NSNull{
+            self.performSelector(onMainThread: method, with: nil, waitUntilDone: Thread.isMainThread);
+        }else if let values = dic[key] {
+            self.performSelector(onMainThread: method, with: values, waitUntilDone: Thread.isMainThread);
+        }else{
+            self.performSelector(onMainThread: method, with: nil, waitUntilDone: Thread.isMainThread);
+        }
+    }
     
     
 }
