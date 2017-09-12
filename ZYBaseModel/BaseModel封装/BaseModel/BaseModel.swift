@@ -48,7 +48,7 @@ class BaseModel: NSObject {
             let method :Selector = NSSelectorFromString(selectedName as String);
     
             if self.responds(to: method){
-                setKeyForValue(key: keys, dic: dic,method: method);
+                setKeyForValue(keys, dic,method);
             }
         }
         
@@ -64,7 +64,7 @@ class BaseModel: NSObject {
             let selectedName : NSString = key as NSString;
             let method :Selector = NSSelectorFromString(selectedName as String);
             if self.responds(to: method){
-                setKeyForValue(key: key, dic: dic,method: method);
+                setKeyForValue(key, dic,method);
             }
 
             
@@ -74,7 +74,7 @@ class BaseModel: NSObject {
     }
     
     //数据处理
-    private func setKeyForValue(key:String,dic:Dictionary<String, Any>,method:Selector){
+    private func setKeyForValue(_ key:String,_ dic:Dictionary<String, Any>,_ method:Selector){
         
         if dic[key] is NSNull{
             self.performSelector(onMainThread: method, with: nil, waitUntilDone: Thread.isMainThread);
