@@ -18,7 +18,7 @@ class ViewController: UIViewController {
         
        
         
-        let dataDiac = ["addr":str,"age":age,"sex":NSNull.init(),"name":"sss"] as [String : Any]
+        let dataDiac = ["addr":str,"age":age,"sex":NSNull.init(),"name":"sss","wkeys":"","id":(100)] as [String : Any]
         let pModel = PersonModel.init(dic:dataDiac);
         
 //        print("ddd",pModel.name,"\n",pModel.age,"\n",pModel.addr,pModel.sex);

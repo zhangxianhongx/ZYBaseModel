@@ -14,4 +14,9 @@ class PersonModel: BaseModel {
     var age:NSNumber?;
     var addr:String?;
     var sex:NSNumber?;
+    
+    override func setAtribute(dic: Dictionary<String, Any>) {
+        map = ["id":"setZYID:"];
+        super.setAtribute(dic: dic);
+    }
 }
