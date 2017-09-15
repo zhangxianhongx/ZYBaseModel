@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  BaseModel封装
 //
-//  Created by ybon on 2016/11/7.
+//  Created by 贝尔特伦 on 2016/11/7.
 //  Copyright © 2016年 ybon. All rights reserved.
 //
 

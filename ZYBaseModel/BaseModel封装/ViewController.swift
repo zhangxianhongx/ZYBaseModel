@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  BaseModel封装
 //
-//  Created by ybon on 2016/11/7.
+//  Created by 贝尔特伦 on 2016/11/7.
 //  Copyright © 2016年 ybon. All rights reserved.
 //
 
@@ -15,17 +15,17 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-       
-        
-        let dataDiac = ["addr":str,"age":age,"sex":NSNull.init(),"name":"sss","wkeys":"","id":(100)] as [String : Any]
+               
+        let dataDiac = ["addr":(100),"age":age,"sex":NSNull.init(),"name":"sss","wkeys":"","id":(100),"arrT":["zxh","yxt"],"dicT":["key":"value"]] as [String : Any]
         let pModel = PersonModel.init(dic:dataDiac);
         
-//        print("ddd",pModel.name,"\n",pModel.age,"\n",pModel.addr,pModel.sex);
+        print("ddd",pModel.name,"\n",pModel.age,"\n",pModel.addr,pModel.sex,pModel.arrT,pModel.dicT,pModel.zYID);
         viewLabel.text = pModel.name;
 //        viewLabel.text = String.init(format: "%@%@", pModel.sex!,pModel.age!);
       
-        
+        if let age = pModel.age {
+            print(age);
+        }
     }
 
 

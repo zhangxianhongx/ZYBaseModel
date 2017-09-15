@@ -12,8 +12,8 @@
 		8619D0141DD07531003BDAD7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8619D0121DD07531003BDAD7 /* Main.storyboard */; };
 		8619D0161DD07531003BDAD7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8619D0151DD07531003BDAD7 /* Assets.xcassets */; };
 		8619D0191DD07531003BDAD7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8619D0171DD07531003BDAD7 /* LaunchScreen.storyboard */; };
-		8619D03E1DD0753C003BDAD7 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8619D03D1DD0753C003BDAD7 /* BaseModel.swift */; };
 		8619D0411DD07651003BDAD7 /* PersonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8619D0401DD07651003BDAD7 /* PersonModel.swift */; };
+		E883834E1F6A47AD0026B786 /* ZYBaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E883834D1F6A47AD0026B786 /* ZYBaseModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,11 +40,11 @@
 		8619D0151DD07531003BDAD7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8619D0181DD07531003BDAD7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8619D01A1DD07531003BDAD7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8619D03D1DD0753C003BDAD7 /* BaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
 		8619D0401DD07651003BDAD7 /* PersonModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonModel.swift; sourceTree = "<group>"; };
-		866B0CC21DE2EC1400132F2C /* BaseModel封装Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BaseModel封装Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		866B0CC31DE2EC1400132F2C /* BaseModel封装UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BaseModel封装UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		868CADF71DDB1BD40057CA25 /* BaseModel封装.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BaseModel封装.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E883834A1F6A472E0026B786 /* BaseModel封装.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BaseModel封装.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E883834B1F6A472E0026B786 /* BaseModel封装Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BaseModel封装Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E883834C1F6A472E0026B786 /* BaseModel封装UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BaseModel封装UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E883834D1F6A47AD0026B786 /* ZYBaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZYBaseModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,9 +76,9 @@
 			isa = PBXGroup;
 			children = (
 				8619D00D1DD07531003BDAD7 /* BaseModel封装 */,
-				868CADF71DDB1BD40057CA25 /* BaseModel封装.app */,
-				866B0CC21DE2EC1400132F2C /* BaseModel封装Tests.xctest */,
-				866B0CC31DE2EC1400132F2C /* BaseModel封装UITests.xctest */,
+				E883834A1F6A472E0026B786 /* BaseModel封装.app */,
+				E883834B1F6A472E0026B786 /* BaseModel封装Tests.xctest */,
+				E883834C1F6A472E0026B786 /* BaseModel封装UITests.xctest */,
 			);
 			sourceTree = "<group>";
 		};
@@ -100,7 +100,7 @@
 		8619D03C1DD0753C003BDAD7 /* BaseModel */ = {
 			isa = PBXGroup;
 			children = (
-				8619D03D1DD0753C003BDAD7 /* BaseModel.swift */,
+				E883834D1F6A47AD0026B786 /* ZYBaseModel.swift */,
 			);
 			path = BaseModel;
 			sourceTree = "<group>";
@@ -130,7 +130,7 @@
 			);
 			name = "BaseModel封装";
 			productName = "BaseModel封装";
-			productReference = 868CADF71DDB1BD40057CA25 /* BaseModel封装.app */;
+			productReference = E883834A1F6A472E0026B786 /* BaseModel封装.app */;
 			productType = "com.apple.product-type.application";
 		};
 		8619D01E1DD07531003BDAD7 /* BaseModel封装Tests */ = {
@@ -148,7 +148,7 @@
 			);
 			name = "BaseModel封装Tests";
 			productName = "BaseModel封装Tests";
-			productReference = 866B0CC21DE2EC1400132F2C /* BaseModel封装Tests.xctest */;
+			productReference = E883834B1F6A472E0026B786 /* BaseModel封装Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		8619D0291DD07531003BDAD7 /* BaseModel封装UITests */ = {
@@ -166,7 +166,7 @@
 			);
 			name = "BaseModel封装UITests";
 			productName = "BaseModel封装UITests";
-			productReference = 866B0CC31DE2EC1400132F2C /* BaseModel封装UITests.xctest */;
+			productReference = E883834C1F6A472E0026B786 /* BaseModel封装UITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -248,8 +248,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				8619D0411DD07651003BDAD7 /* PersonModel.swift in Sources */,
-				8619D03E1DD0753C003BDAD7 /* BaseModel.swift in Sources */,
 				8619D0111DD07531003BDAD7 /* ViewController.swift in Sources */,
+				E883834E1F6A47AD0026B786 /* ZYBaseModel.swift in Sources */,
 				8619D00F1DD07531003BDAD7 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
